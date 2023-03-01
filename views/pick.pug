@@ -1,0 +1,13 @@
+extends layout 
+
+block headline  
+  h1 Pick #{pickNum}
+
+block content 
+  img(src=`/images/${img}`)
+  if pickNum === 1
+    form(action="/summary" method="get")
+      input(type="submit" value="View Order")
+  else
+    form(action="/pick" method="get")
+      input(type="submit" value="Next Pick")
