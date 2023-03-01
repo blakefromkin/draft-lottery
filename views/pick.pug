@@ -7,7 +7,7 @@ block content
   img(src=`/images/${img}`)
   if pickNum === 1
     form(action="/summary" method="get")
-      input(type="submit" value="View Order")
+      input(type="submit" value="View Full Order")
   else
-    form(action="/pick" method="get")
+    form(action=`/pick/${pickNum - 1}` method="get")
       input(type="submit" value="Next Pick")
