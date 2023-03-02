@@ -39,10 +39,17 @@ app.get('/', (req, res) => {
   res.render('landing.pug');
 });
 
+
 app.get('/pick/:pickNum', (req, res) => {
   let pickNum = +req.params.pickNum;
   let teamsManager = res.locals.teamsManager;
 
+  if (pickNum === 6) {
+    teamsManager.resetWeighted();
+    res.locals.order = teamsManager.randomizeDraftOrder();
+    req.session.order = res.locals.order;
+  }
+ 
   let team = teamsManager.getTeams().find(team => {
     return team.name === res.locals.order[teamsManager.totalTeams - pickNum];
   });
@@ -62,11 +69,11 @@ app.get('/summary', (req, res) => {
   res.render('summary.pug', {order});
 });
 
-app.get('/reset', (req, res) => {
-  delete req.session.order;
-  res.locals.teamsManager.deleteWeighted();
-  res.redirect('/');
-});
+// app.get('/reset', (req, res) => {
+//   delete req.session.order;
+//   res.locals.teamsManager.deleteWeighted();
+//   res.redirect('/');
+// });
 
 app.listen(3000, "localhost", () => {
   console.log("Listening to port 3000.");
