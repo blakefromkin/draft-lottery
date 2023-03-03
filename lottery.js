@@ -10,7 +10,7 @@ const LokiStore = store(session);
 app.set('view engine', 'pug');
 app.set("views", "./views");
 
-app.use(express.static('lib'));
+app.use(express.static('public'));
 app.use(morgan("common"));
 app.use(express.urlencoded({ extended: false }));
 app.use(session({
