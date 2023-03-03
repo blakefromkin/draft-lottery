@@ -69,12 +69,6 @@ app.get('/summary', (req, res) => {
   res.render('summary.pug', {order});
 });
 
-// app.get('/reset', (req, res) => {
-//   delete req.session.order;
-//   res.locals.teamsManager.deleteWeighted();
-//   res.redirect('/');
-// });
-
 app.listen(3000, "localhost", () => {
   console.log("Listening to port 3000.");
 });
