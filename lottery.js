@@ -69,6 +69,12 @@ app.get('/summary', (req, res) => {
   res.render('summary.pug', {order});
 });
 
+// Error handler
+app.use((err, req, res, _next) => {
+  console.log(err); // Writes more extensive information to the console log
+  res.status(404).send(err.message);
+});
+
 app.listen(3000, "localhost", () => {
   console.log("Listening to port 3000.");
 });
