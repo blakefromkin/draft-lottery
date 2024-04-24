@@ -1,7 +1,7 @@
 extends layout 
 
 block headline  
-  h1 Welcome to the 2023 Fantasy Bros Draft Order Reveal!
+  h1 Welcome to the #{new Date().getFullYear()} Fantasy Bros Draft Order Reveal!
 
 block content 
   form(action="/pick/6" method="get")
