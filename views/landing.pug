@@ -1,7 +1,10 @@
 extends layout 
 
-block headline  
-  h1 Welcome to the #{new Date().getFullYear()} Fantasy Bros Draft Order Reveal!
+block headline
+  h1
+    span Welcome to the #{new Date().getFullYear()} 
+    img(src="/images/football.png", class="football")
+    span  Draft Order Reveal!
 
 block content 
   form(action="/pick/6" method="get")

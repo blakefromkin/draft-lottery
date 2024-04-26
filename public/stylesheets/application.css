@@ -11,6 +11,13 @@ img {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Softer shadow for a sleek look */
 }
 
+.football {
+  height: 2em;
+  vertical-align: middle;
+  display: inline;
+  box-shadow: none;
+}
+
 h1 {
   text-align: center;
   font-size: 2.5rem; /* Larger size for emphasis */
@@ -27,14 +34,16 @@ input[type="submit"] {
   padding: 15px 30px;
   background-color: #555; /* Dark button for a modern look */
   color: white;
-  border: none;
+  border: 2px solid #777; /* Stylish border */
   border-radius: 5px; /* Rounded corners */
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Drop shadow */
 }
 
 input[type="submit"]:hover {
   background-color: #666; /* Lighter on hover */
+  transform: scale(1.05); /* Slight increase in size */
 }
 
 td,
@@ -51,4 +60,18 @@ th {
   font-size: 2rem;
   background-color: #444; /* Header contrast */
   color: #fff;
+}
+
+form {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05); /* Subtle contrast for form area */
+  border-radius: 10px; /* Rounded corners for form background */
+  margin: auto;
+  width: 80%; /* Manage form width */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Enhance depth with shadow */
+}
+
+form + form {
+  margin-top: 20px; /* Space between multiple forms */
 }
