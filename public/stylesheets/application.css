@@ -68,7 +68,7 @@ form {
   background: rgba(255, 255, 255, 0.05); /* Subtle contrast for form area */
   border-radius: 10px; /* Rounded corners for form background */
   margin: auto;
-  width: 80%; /* Manage form width */
+  width: 100%; /* Manage form width */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Enhance depth with shadow */
 }
 
