@@ -63,7 +63,6 @@ app.get("/pick/:pickNum", (req, res, next) => {
   let img = team.pic;
 
   res.render("pick.pug", { img, pickNum });
-  pickNum -= 1;
 });
 
 // Render the summary page
